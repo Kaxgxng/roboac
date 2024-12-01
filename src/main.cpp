@@ -12,9 +12,11 @@ AccelStepper stepper(Mode,PUL,DIR); // Defaults to AccelStepper::FULL4WIRE (4 pi
 
 void setup()
 {  
+  Serial.begin(115200);
   stepper.setMaxSpeed(1500);
   stepper.setAcceleration(750);
   stepper.runToNewPosition(500);
+  Serial.println("Hi Stepper");
 }
 
 void loop()
